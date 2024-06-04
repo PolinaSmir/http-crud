@@ -30,6 +30,4 @@ process.on("beforeExit", () => {
   client.end();
 });
 
-module.exports = {
-  db,
-};
+module.exports = db;

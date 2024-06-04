@@ -51,12 +51,14 @@ class Thing {
   }
 
   static async updateByPk({ id, updateValues }) {
+    console.log("1");
     const insertAttr = Object.entries(this._attributes)
       .filter(([attr, domain]) => attr in updateValues)
       .map(([attr]) => attr);
+    console.log("2");
 
     const insertValueStr = insertAttr
-      .map((currentAttr) => {
+      .map((attr) => {
         const value = updateValues[attr];
 
         return `${attr} = ${typeof value === "string" ? `'${value}'` : value}`;

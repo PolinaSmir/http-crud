@@ -5,5 +5,5 @@ CREATE TABLE things(
   body text NOT NULL CHECK(body != '')
 );
 
--- INSERT INTO things(body) VALUES
--- ('Hello world!');
+INSERT INTO things(body) VALUES
+('Hello world!');
